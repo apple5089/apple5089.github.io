@@ -1,152 +1,152 @@
-# 每日工作计划备忘录
+# Daily Work Plan Memo
 
-一个零依赖、纯前端的每日工作计划管理工具，支持拖拽排序、Excel导入导出、离线使用。
+A zero-dependency, pure frontend daily work plan management tool that supports drag-and-drop sorting, Excel import and export, and offline use.
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-1. 直接打开 `index.html` 文件即可使用
-2. 无需安装任何软件或依赖
-3. 支持离线使用，数据保存在浏览器本地存储中
+1. Simply open the `index.html` file to use it
+2. No need to install any software or dependencies
+3. Support offline usage, with data saved in the browser's local storage
 
-## 📋 功能特性
+## 📋 Functional Features
 
-### 核心功能
-- **周视图管理**：周一到周日，上午/下午/晚上三时段
-- **任务生命周期**：创建、编辑、完成、删除、拖拽排序
-- **重复任务**：支持单次、每天、每周重复类型，智能排期
-- **本地存储**：自动保存，刷新页面不丢失
-- **CSV导入导出**：支持.csv格式，包含重复任务信息
+### Core functions
+- **Weekly View Management**: Monday through Sunday, with three time slots: morning, afternoon, and evening
+- **Task lifecycle**: creation, editing, completion, deletion, and drag-and-drop sorting
+- **Recurring Tasks**: Supports single occurrence, daily, and weekly recurrence types, with intelligent scheduling
+- **Local storage**: Automatically saved, no loss upon page refresh
+- **CSV Import and Export**: Supports the .csv format, including information on recurring tasks
 
-### 交互操作
-- **拖拽排序**：任务可在同一时段内上下排序
-- **拖拽排期**：从任务池拖拽到具体时段
-- **双击编辑**：点击任务卡片编辑详情
-- **键盘快捷键**：
-  - `Ctrl+N`：新建任务
-  - `Ctrl+S`：手动保存
-  - `Ctrl+E`：导出Excel
+### Interactive operation
+- **Drag and sort**: Tasks can be sorted up or down within the same time slot
+- **Drag and drop scheduling**: Drag tasks from the task pool to specific time slots
+- **Double-click to edit**: Click on the task card to edit its details
+- **Keyboard shortcuts**:
+  - `Ctrl+N`: New task
+  - `Ctrl+S`: Manual save
+  - `Ctrl+E`: Export to Excel
 
-## 🎯 使用指南
+## 🎯 User Guide
 
-### 创建任务
-1. **方式一**：点击任务池中的"+"按钮，创建后拖拽到指定时段
-2. **方式二**：点击任意时段单元格中的"+"按钮，直接创建到该时段
-3. **方式三**：双击空白区域创建任务
+### Create Task
+1. **Method 1**: Click the "+" button in the task pool, create a task, and then drag it to the designated time slot
+2. **Method 2**: Click the "+" button in any time slot cell to directly create to that time slot
+3. **Method 3**: Double-click on an empty area to create a task
 
-### 任务管理
-- **完成**：点击任务前的复选框
-- **编辑**：点击任务卡片任意位置（复选框和删除按钮除外）
-- **删除**：点击任务右上角的×按钮
-- **移动**：拖拽任务到任意时段或任务池
+### Task Management
+- **Completed**: Click the checkbox before the task
+- **Edit**: Click anywhere on the task card (excluding the checkbox and delete button)
+- **Delete**: Click the × button in the top right corner of the task
+- **Move**: Drag and drop tasks to any time slot or task pool
 
-### Excel导入导出
+### Excel import and export
 
-#### 导出CSV
-1. 点击顶部"📊 CSV导出"按钮
-2. 文件将自动下载，格式为 `weekly_plan_YYYY-MM-DD.csv`
-3. 包含所有任务信息：星期、时段、标题、时间、优先级、完成状态、备注、重复类型、选定星期
+#### Export to CSV
+1. Click the "📊 CSV Export" button at the top
+2. The file will be downloaded automatically in the format of `weekly_plan_YYYY-MM-DD.csv`
+3. Include all task information: week, time slot, title, time, priority, completion status, remarks, recurrence type, selected week
 
-#### 导入CSV
-1. 点击顶部"📥 CSV导入"按钮
-2. 选择CSV文件上传
-3. 预览任务数量后确认导入
-4. 导入将覆盖当前所有任务，支持重复任务的识别和还原
+#### Import CSV
+1. Click the "📥 CSV Import" button at the top
+2. Select CSV file for uploading
+3. Confirm the import after previewing the number of tasks
+4. Importing will overwrite all current tasks, and support the identification and restoration of duplicate tasks
 
-#### CSV模板格式
+#### CSV Template Format
 
-| 列名 | 说明 | 示例 |
+| Column Name | Description | Example |
 |------|------|------|
-| A列 - 星期 | 周一到周日 | 周一 |
-| B列 - 时段 | 上午/下午/晚上/重复任务 | 上午 |
-| C列 - 任务标题 | 任务名称 | 项目会议 |
-| D列 - 开始时间 | HH:mm格式 | 09:00 |
-| E列 - 结束时间 | HH:mm格式 | 10:00 |
-| F列 - 优先级 | 高/中/低 | 高 |
-| G列 - 是否完成 | 是/否 | 否 |
-| H列 - 备注 | 任务详情 | 讨论项目进度 |
-| I列 - 重复类型 | 单次/每天/每周 | 每周 |
-| J列 - 选定星期 | 逗号分隔的星期 | 周一,周三,周五 |
+| Column A - Day | Monday to Sunday | Monday |
+| Column B - Time Period | Morning/Afternoon/Evening/Recurring Task | Morning |
+| Column C - Task Title | Task Name | Project Meeting |
+| Column D - Start Time | HH:mm format | 09:00 |
+| Column E - End Time | HH:mm format | 10:00 |
+| F column - Priority | High/Medium/Low | High |
+| Column G - Completed or Not | Yes/No | No |
+| Column H - Remarks | Task Details | Discuss Project Progress |
+| Column I - Recurrence Type | Single/Daily/Weekly | Weekly |
+| Column J - Selected Weeks | Comma-separated Weeks | Monday, Wednesday, Friday |
 
-### 重复任务使用
-- **添加任务**：点击"+ 添加任务"按钮，选择重复类型（单次/每天/每周）
-- **每周重复**：选择"每周"时可指定具体星期几执行
-- **一键排期**：点击"一键排期"按钮，系统会根据任务时间和重复类型智能分配到对应时段
-- **优先级排序**：一键排期时会优先安排高优先级任务
+### Reuse of repeated tasks
+- **Add Task**: Click the "+ Add Task" button and select the recurrence type (once/daily/weekly)
+- **Weekly repetition**: When selecting "Weekly", you can specify the specific day of the week for execution
+- **One-click Scheduling**: Click the "One-click Scheduling" button, and the system will intelligently allocate tasks to corresponding time slots based on task time and recurrence type
+- **Priority Sorting**: When scheduling with one click, high-priority tasks will be arranged first
 
-## 🎨 主题设置
+## 🎨 Theme Settings
 
-支持三种主题：
-- **浅色主题**：默认主题，适合日常使用
-- **深色主题**：护眼模式，适合夜间使用
-- **护眼绿主题**：绿色配色，长时间使用更舒适
+Support three themes:
+- **Light Theme**: The default theme, suitable for daily use
+- **Dark Theme**: Eye-protection mode, suitable for night use
+- **Eye-friendly green theme**: Green color scheme, providing greater comfort for prolonged use
 
-## 📱 移动端适配
+## 📱 Mobile adaptation
 
-- **响应式设计**：自动适配不同屏幕尺寸
-- **移动端手势**：任务卡片可左右滑动完成或删除
-- **悬浮按钮**：移动端显示侧边栏切换按钮
+- **Responsive design**: Automatically adapts to different screen sizes
+- **Mobile gestures**: Task cards can be swiped left or right to complete or delete them
+- **Floating Button**: Display the sidebar toggle button on mobile devices
 
-## 💾 数据存储
+## 💾 Data Storage
 
-- **本地存储**：所有数据保存在浏览器localStorage中
-- **自动保存**：每次操作后自动保存
-- **手动保存**：按Ctrl+S或点击相关按钮
-- **清空数据**：点击"清空本周"可重置所有任务
+- **Local storage**: All data is saved in the browser's localStorage
+- **Auto Save**: Automatically save after each operation
+- **Manual save**: Press Ctrl+S or click the relevant button
+- **Clear Data**: Click "Clear This Week" to reset all tasks
 
-## 🔧 技术特性
+## 🔧 Technical Features
 
-- **零依赖**：纯HTML/CSS/JavaScript实现
-- **单文件**：所有功能集成在index.html中
-- **离线使用**：支持PWA，可添加到主屏
-- **兼容性**：支持Chrome 88+、Edge 88+、Safari 14+
-- **文件大小**：< 500KB
+- **Zero dependencies**: Implemented purely with HTML/CSS/JavaScript
+- **Single file**: All functions are integrated into index.html
+- **Offline usage**: Supports PWA, can be added to the home screen
+- **Compatibility**: Supports Chrome 88+、Edge 88+、Safari 14+
+- **File size**: < 500KB
 
-## 📊 数据模型
+## 📊 Data Model
 
 ```json
 {
-  "id": "任务唯一标识",
-  "title": "任务标题",
-  "start": "开始时间(HH:mm)",
-  "end": "结束时间(HH:mm)",
+  "id": "Unique identifier for the task",
+  "title": "Task Title",
+  "start": "Start time (HH:mm)",
+  "end": "End time (HH:mm)",
   "priority": 1|2|3,
   "done": true|false,
-  "doneAt": "完成时间戳",
+  "doneAt": "Completion timestamp",
   "weekday": 1-7,
   "slot": "AM|PM|EVENING|POOL",
-  "note": "任务备注"
+  "note": "Task Notes"
 }
 ```
 
-## 🚨 注意事项
+## 🚨 Precautions
 
-1. **数据备份**：建议定期导出Excel备份重要数据
-2. **浏览器兼容性**：建议使用现代浏览器获得最佳体验
-3. **隐私保护**：所有数据仅存储在本地，不会上传到服务器
-4. **存储限制**：浏览器localStorage有存储上限（通常5-10MB）
+1. **Data backup**: It is recommended to regularly export Excel files to back up important data
+2. **Browser Compatibility**: It is recommended to use a modern browser for the best experience
+3. **Privacy Protection**: All data is stored locally and will not be uploaded to the server
+4. **Storage Limit**: The browser localStorage has a storage limit (usually 5-10MB)
 
-## 🆘 常见问题
+## 🆘 Common Issues
 
-**Q: 数据会丢失吗？**
-A: 数据保存在浏览器本地存储中，除非清除浏览器数据或卸载应用，否则会一直保留。
+**Q: Will the data be lost? **
+A: The data is saved in the browser's local storage, and it will be retained unless the browser data is cleared or the app is uninstalled.
 
-**Q: 如何迁移到另一台设备？**
-A: 使用Excel导出功能，在新设备上导入即可。
+**Q: How do I migrate to another device? **
+A: Use the export function in Excel and import it on the new device.
 
-**Q: 支持多人协作吗？**
-A: 目前为单机版，不支持多人协作。可通过Excel文件分享任务。
+**Q: Does it support multi-person collaboration? **
+A: Currently, it is a standalone version and does not support multiplayer collaboration. Tasks can be shared through Excel files.
 
-**Q: 如何重置所有数据？**
-A: 点击"清空本周"按钮，或清除浏览器localStorage中的'weeklyTasks'数据。
+**Q: How to reset all data? **
+A: Click the "Clear This Week" button, or clear the 'weeklyTasks' data in the browser's localStorage.
 
-## 📞 联系支持
+## 📞 Contact Support
 
-如有问题或建议，请通过以下方式联系：
-- 提交Issue到项目仓库
-- 发送邮件反馈
+If you have any questions or suggestions, please contact us through the following ways:
+- Submit an issue to the project repository
+- Send an email for feedback
 
 ---
 
-**版本**：v1.0.0  
-**更新日期**：2024年  
-**许可证**：MIT
+**Version**: v1.0.0
+**Updated Date**: 2024
+**License**: MIT
