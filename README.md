@@ -145,8 +145,4 @@ If you have any questions or suggestions, please contact us through the followin
 - Submit an issue to the project repository
 - Send an email for feedback
 
----
 
-**Version**: v1.0.0
-**Updated Date**: 2024
-**License**: MIT
